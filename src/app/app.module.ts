@@ -16,14 +16,28 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
 
-import { DishService } from './services/dish.service'; // Declare a service
+import { DishService } from './services/dish.service';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component'; 
+
+// Declare a routing module
+import { AppRoutingModule } from './app-routing/app-routing.module';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    DishdetailComponent
+    DishdetailComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +48,11 @@ import { DishService } from './services/dish.service'; // Declare a service
     // Import Modules
     BrowserAnimationsModule,
     MatToolbarModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+
+    // Import Routing module
+    AppRoutingModule
+
   ],
   providers: [ DishService ], // Angular looks here, then inject it where required
   bootstrap: [AppComponent]
