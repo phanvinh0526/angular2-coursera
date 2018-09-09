@@ -12,7 +12,8 @@
   <!-- Material Design Provide | in Bootstrap => @media -->
   <div fxFlex> <!-- Apply Flex layout here-->
     <mat-grid-list cols="2" rowHeight="200px">
-      <mat-grid-tile *ngFor="let dish of dishes" (click)="onSelect(dish)"> <!-- Structure Directive in Angular | loop through dishes obj-->
+      <!-- <mat-grid-tile *ngFor="let dish of dishes" (click)="onSelect(dish)"> Structure Directive in Angular | loop through dishes obj -->
+      <mat-grid-tile *ngFor="let dish of dishes" [routerLink]="['/dishdetail', dish.id]">
         <img height="200px" src={{dish.image}} alt={{dish.name}}>
         <mat-grid-tile-footer>
         <h1 mat-line>{{dish.name | uppercase}}</h1> <!-- Render with uppercase Angular Pipe -->
@@ -21,7 +22,6 @@
       </mat-grid-tile>
     </mat-grid-list>    
   </div>
-  <app-dishdetail [dish]="selectedDish"></app-dishdetail>
 
 
   <div fxFlex *ngIf="selectedDish">

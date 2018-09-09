@@ -11,10 +11,13 @@ import { ContactComponent } from '../contact/contact.component'; // Declare a se
 export const routes: Routes = [
     // Define home component | will navigate Home to HomeComponent / HomePage
     {path: 'home', component: HomeComponent},
+    // Redirect all other URLs to HomePag
+    {path: '', redirectTo: '/home', pathMatch: 'full'},
+
     // Define other components
     {path: 'menu', component: MenuComponent},
-    // Redirect all other URLs to HomePage
-    {path: '', redirectTo: '/home', pathMatch: 'full'}
-    // {path: 'about', component: AboutComponent},
+    {path: 'dishdetail/:id', component: DishdetailComponent},
+    {path: 'contact', component: ContactComponent},
+    {path: 'about', component: AboutComponent},
      
 ];

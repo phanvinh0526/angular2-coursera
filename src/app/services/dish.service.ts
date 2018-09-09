@@ -14,4 +14,20 @@ export class DishService {
   getDishes(): Dish[]{
     return DISHES;
   }
+
+  // return dish correspond to the id
+  getDish(id: number): Dish{
+    // Apply filterring in an array | return an array -> just get 1st one
+      // Addon function - Instead of writting a full function, use ShortFunction ~ Lambda by using "=>"
+    return DISHES.filter((dish) => (dish.id === id))[0];
+  }
+
+  // get featured
+  getFeaturedDish(): Dish{
+    // If featured=true -> return dish obj
+    return DISHES.filter((dish) => (dish.featured))[0];
+  }
+
+
+
 }
