@@ -58,7 +58,9 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     AppRoutingModule
 
   ],
-  providers: [ DishService, PromotionService ], // Angular looks here, then inject it where required
+  providers: [ DishService, PromotionService ], 
+  // Angular looks here, then inject it 
+  // where required
   bootstrap: [AppComponent]
 })
 export class AppModule { }
